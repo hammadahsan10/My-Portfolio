@@ -1,0 +1,62 @@
+[
+  {
+    "title": "NCS-Railway",
+    "image": "./projectImages/ncs.png",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap",
+    "description": "Industrial project currently being used by Railways, developed in React JS. (Regrettably, I'm unable to provide the code due to our company's policies)",
+    "github": "",
+    "deployed": "",
+    "bgcolor": "#29cbe0",
+    "id": "1"
+  },
+  {
+    "title": "APP-IN-SNAP CMS",
+    "image": "./projectImages/ais.png",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap",
+    "description": "Office Product that serves as a CMS (Content Management System), Developed in React JS. (Regrettably, I'm unable to provide the code due to our company's policies)",
+    "github": "",
+    "deployed": "",
+    "bgcolor": "#6c4bf4",
+    "id": "2"
+  },
+  {
+    "title": "Masjid Azan Alert System",
+    "image": "./projectImages/mosque.png",
+    "description": "Azan alarm application that dynamically triggers prayer call sounds during prayer times, it allows users to seamlessly add mosque details, including their prayer timings, directly within the app",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap",
+    "github": "https://github.com/hammadahsan10/Masjid-Azan-Alert-System",
+    "deployed": "https://norrinradd8.github.io/bike_buddy/",
+    "bgcolor": "#f37737",
+    "id": "3"
+  },
+  {
+    "title": "Tic-Tac-Toe App",
+    "image": "./projectImages/tictoc.png",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap",
+    "description": "Tic-Tac-Toe Game with all Latest features",
+    "github": "https://github.com/hammadahsan10/Tic-Tac-Toe",
+    "deployed": "https://mdyeates.github.io/coding-quiz/",
+    "bgcolor": "#f85781",
+    "id": "4"
+  },
+  {
+    "title": "Burger Maker App",
+    "image": "./projectImages/burger.png",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap",
+    "description": "You can make and customize your own Burger by all ingredients with updated prices",
+    "github": "https://github.com/hammadahsan10/Burger-Maker-App",
+    "deployed": "https://mdyeates.github.io/daily-planner/",
+    "bgcolor": "#3e67ff",
+    "id": "5"
+  },
+  {
+    "title": "Todo App",
+    "image": "./projectImages/todo.png",
+    "description": "Todo Keeper App, Developed in React-JS",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap",
+    "github": "https://github.com/hammadahsan10/To-Do-App",
+    "deployed": "https://p1-heroes.netlify.app/",
+    "bgcolor": "#ffcc33",
+    "id": "6"
+  }
+]
