@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Modal from "react-modal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import closeModal from "../images/close.svg";
 
 const Project = ({ technologies, title, image, color, id, github, deployed, description }) => {
 
+
+  const [projectId, setProjectId] = useState(false)
   const [ref, inView] = useInView({
     threshold: 0.5,
     triggerOnce: true,
@@ -22,8 +24,20 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
   const handleOpenModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
 
+
+  useEffect(() => {
+    if (id == 1 || id == 2) {
+      setProjectId(true)
+    }
+    else {
+      setProjectId(false)
+    }
+  }, [id])
+
+  console.log("projectId", projectId)
+
   return (
-    
+
     <motion.div
       ref={ref}
       className="col-sm-12 col-lg-6"
@@ -48,7 +62,7 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
           <img src={image} alt="Laptop displaying the application" />
         </div>
       </div>
-     
+
       <Modal
         isOpen={showModal}
         onRequestClose={handleCloseModal}
@@ -64,7 +78,6 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
             zIndex: "9999",
             overflow: "hidden",
             backgroundColor: "#131a22",
-            width: "clamp(30%, 100vw, 100%)",
             marginRight: "0",
             height: "min(60%, 60vh)",
             width: "min(60%, 60vh)",
@@ -90,24 +103,16 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
           </div>
 
           <div className="modalBtns">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 1 }}
-              className="btn"
-              onClick={() => (window.location.href = github)}
-            >
-              GitHub
-            </motion.button> 
-
-            {/* <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 1 }}
-              className="btn"
-              onClick={() => (window.location.href = deployed)}
-            >
-              Live
-            </motion.button> */}
-            
+            {projectId === false ? (
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 1 }}
+                className="btn"
+                onClick={() => (window.location.href = github)}
+              >
+                GitHub
+              </motion.button>
+            ) : null}
           </div>
         </div>
       </Modal>

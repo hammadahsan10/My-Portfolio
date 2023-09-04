@@ -28,7 +28,7 @@
   
   /* Media query for responsive design */
 
-  @media (min-width: 768px) and (max-width: 920px) {
+  @media (min-width: 790px) and (max-width: 920px) {
   
     .resp
     {
@@ -36,7 +36,7 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 510px) and  (max-width: 790px) {
     .skills-list {
       justify-content: center; /* Center items in the vertical layout */
       align-items: center;
@@ -52,7 +52,7 @@
     }
   }
 
-  @media (max-width: 510px) {
+  @media (min-width: 450px) and  (max-width: 510px) {
     .skills-list {
       justify-content: center; /* Center items in the vertical layout */
       align-items: center;
@@ -69,7 +69,7 @@
     }
   }
 
-  @media (max-width: 360px) {
+  @media  (max-width: 450px)  {
     .skills-list {
       justify-content: center; /* Center items in the vertical layout */
       align-items: center;

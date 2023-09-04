@@ -156,6 +156,11 @@ header {
   background-color: transparent;
 }
 
+.closeModal {
+  margin-left: 320px !important;
+  margin-bottom: 40px !important;
+}
+
 /* --- MEDIA QUERIES --- */
 @media (min-width: 750px) {
   .links {
