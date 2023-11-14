@@ -6,7 +6,6 @@ import closeModal from "../images/close.svg";
 
 const Project = ({ technologies, title, image, color, id, github, deployed, description }) => {
 
-
   const [projectId, setProjectId] = useState(false)
   const [ref, inView] = useInView({
     threshold: 0.5,
