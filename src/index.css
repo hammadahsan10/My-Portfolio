@@ -51,6 +51,7 @@ body {
   background-color: var(--hl-color);
   color: var(--text-color);
 }
+
 .pageTitle {
   color: var(--text-color);
   font-size: 36px;

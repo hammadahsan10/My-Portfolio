@@ -6,7 +6,6 @@ import closeModal from "../images/close.svg";
 
 const Project = ({ technologies, title, image, color, id, github, deployed, description }) => {
 
-  const [projectId, setProjectId] = useState(false)
   const [ref, inView] = useInView({
     threshold: 0.5,
     triggerOnce: true,
@@ -22,18 +21,6 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
   const [showModal, setShowModal] = useState(false);
   const handleOpenModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
-
-
-  useEffect(() => {
-    if (id == 1 || id == 2) {
-      setProjectId(true)
-    }
-    else {
-      setProjectId(false)
-    }
-  }, [id])
-
-  console.log("projectId", projectId)
 
   return (
 
@@ -51,9 +38,9 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
         onClick={handleOpenModal}
       >
         <div className="textWrap col-6 d-flex flex-column justify-content-center align-items-center m-5">
-          <p className="tech">
+          {/* <p className="tech">
             <em>{technologies}</em>
-          </p>
+          </p> */}
           <h3 className="projectTitle">{title}</h3>
           <span className="viewWork">Project Details &#8594;</span>
         </div>
@@ -65,32 +52,34 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
       <Modal
         isOpen={showModal}
         onRequestClose={handleCloseModal}
+        className="modal-responsive"
         style={{
           content: {
             backgroundColor: "#131a22",
             color: "#9f9f9f",
-            padding: "60px",
+            padding: "40px", 
             display: "flex",
             flexDirection: "column",
+            margin: "auto",
+            maxWidth: "50%",
+            maxHeight: "60%",
           },
           overlay: {
             zIndex: "9999",
             overflow: "hidden",
-            backgroundColor: "#131a22",
-            marginRight: "0",
-            height: "min(60%, 60vh)",
-            width: "min(60%, 60vh)",
-            margin: "auto",
+            backgroundColor: "rgba(19, 26, 34, 0.9)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           },
         }}
+        
       >
 
         <div className="container modal">
-
-          <img src={closeModal} className="closeMenu closeModal" onClick={handleCloseModal} alt="Close"></img>
+          <img src={closeModal} className="closeMenu " onClick={handleCloseModal} alt="Close"></img>
           <h3 className="modalTitle">{title}</h3>
           <h5 className="modalTitle">{technologies}</h5>
-
           <div className="projectDescription">
             {description.split("\n").map((paragraph, i) => (
               <p key={{ i }}>
@@ -102,16 +91,29 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
           </div>
 
           <div className="modalBtns">
-            {projectId === false ? (
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 1 }}
-                className="btn"
-                onClick={() => (window.location.href = github)}
-              >
-                GitHub
-              </motion.button>
-            ) : null}
+            <>
+              {github ?
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 1 }}
+                  className="btn"
+                  onClick={() => (window.location.href = github)}
+                >
+
+                  Get Code
+                </motion.button>
+                : null}
+              {deployed ?
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 1 }}
+                  className="btn"
+                  onClick={() => (window.location.href = deployed)}
+                >
+                  View Site
+                </motion.button>
+                : null}
+            </>
           </div>
         </div>
       </Modal>

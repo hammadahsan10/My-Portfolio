@@ -2,20 +2,20 @@
   {
     "title": "NCS-Railway",
     "image": "./projectImages/ncs.png",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap",
-    "description": "Industrial project currently being used by Railways, developed in React JS. (Regrettably, I'm unable to provide the code due to our company's policies)",
-    "github": "",
-    "deployed": "",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact",
+    "description": "Industrial project currently being used by Railways (Regrettably, I'm unable to provide the code due to our company's policies)",
+    "deployed":"http://qa-ncs-railway.appinsnap.com/#/",
+    "github":"",
     "bgcolor": "#29cbe0",
     "id": "1"
   },
   {
     "title": "APP-IN-SNAP CMS",
     "image": "./projectImages/ais.png",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap",
-    "description": "Office Product that serves as a CMS (Content Management System), Developed in React JS. (Regrettably, I'm unable to provide the code due to our company's policies)",
-    "github": "",
-    "deployed": "",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact",
+    "description": "Office Product that serves as a CMS(Content Management System) and HRMS(Human Resource Management System). (Regrettably, I'm unable to provide the code due to our company's policies)",
+    "deployed":"http://cms.appinsnap.com/",
+    "github":"",
     "bgcolor": "#6c4bf4",
     "id": "2"
   },
@@ -25,7 +25,7 @@
     "description": "Azan alarm application that dynamically triggers prayer call sounds during prayer times, it allows users to seamlessly add mosque details, including their prayer timings, directly within the app",
     "technologies": "React JS | HTML/CSS/SCSS | Bootstrap",
     "github": "https://github.com/hammadahsan10/Masjid-Azan-Alert-System",
-    "deployed": "https://norrinradd8.github.io/bike_buddy/",
+    "deployed":"",
     "bgcolor": "#f37737",
     "id": "3"
   },
@@ -35,7 +35,7 @@
     "technologies": "React JS | HTML/CSS/SCSS | Bootstrap",
     "description": "Tic-Tac-Toe Game with all Latest features",
     "github": "https://github.com/hammadahsan10/Tic-Tac-Toe",
-    "deployed": "https://mdyeates.github.io/coding-quiz/",
+    "deployed":"",
     "bgcolor": "#f85781",
     "id": "4"
   },
@@ -45,18 +45,62 @@
     "technologies": "React JS | HTML/CSS/SCSS | Bootstrap",
     "description": "You can make and customize your own Burger by all ingredients with updated prices",
     "github": "https://github.com/hammadahsan10/Burger-Maker-App",
-    "deployed": "https://mdyeates.github.io/daily-planner/",
-    "bgcolor": "#3e67ff",
+    "deployed":"",
+    "bgcolor": "rgb(215 170 126)",
     "id": "5"
   },
+  {
+    "title": "JS Wall",
+    "image": "./projectImages/jswall_ss.png",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact",
+    "description": "Industrial project currently being used by JS Bank. (Regrettably, I'm unable to provide the code due to our company's policies)",
+    "deployed":"http://jswall.appinsnap.com/",
+    "github":"",
+    "bgcolor": "#007c84",
+    "id": "6"
+  },
+
+  {
+    "title": "Retro Design Website",
+    "image": "./projectImages/retro-ss.png",
+    "description": "Static Retro Design Newspaper to make it vintage look",
+    "technologies": "HTML/CSS/SCSS | Bootstrap",
+    "github": "https://github.com/hammadahsan10/Retro-Design-Website",
+    "deployed": "",
+    "bgcolor": "rgb(255 225 133)",
+    "id": "7"
+  },
+
+  {
+    "title": "Realtime Chat-box",
+    "image": "./projectImages/chat-ss.png",
+    "description": "Real-time Chatbox with Gmail Authentication for Multiple Users",
+    "technologies": "React JS | Firebase | HTML/CSS/SCSS | Bootstrap | Material-UI",
+    "github": "https://github.com/hammadahsan10/Realtime-Chat-App",
+    "deployed": "",
+    "bgcolor": "rgb(101 134 255)",
+    "id": "8"
+  },
+
   {
     "title": "Todo App",
     "image": "./projectImages/todo.png",
     "description": "Todo Keeper App, Developed in React-JS",
     "technologies": "React JS | HTML/CSS/SCSS | Bootstrap",
     "github": "https://github.com/hammadahsan10/To-Do-App",
-    "deployed": "https://p1-heroes.netlify.app/",
-    "bgcolor": "#ffcc33",
-    "id": "6"
+    "deployed": "",
+    "bgcolor": "#949494",
+    "id": "9"
+  },
+
+  {
+    "title": "Contact Finder",
+    "image": "./projectImages/contact_ss.png",
+    "description": "Industrial project being used to filter out all the duplicate and Unique records from Excel Sheet. (Regrettably, I'm unable to provide the code due to our company's policies)",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact",
+    "deployed": "",
+    "github": "https://github.com/hammadahsan10/Contact-Finder",
+    "bgcolor": "rgb(51 255 212)",
+    "id": "10"
   }
 ]

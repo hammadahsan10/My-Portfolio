@@ -1,31 +1,42 @@
 import React from 'react';
-import './Skills.css'; // Import your CSS file for styling
+import './Skills.css';
 
-const Skills = () => {
+const skillsData = [
+    { name: 'HTML/ HTML5', proficiency: 80, bgColor: 'linear-gradient(83deg, #736DFF, rgb(170 135 212))' },
+    { name: 'CSS/ CSS3/ SCSS', proficiency: 80, bgColor: 'linear-gradient(83deg, #44DEC5, #4EBCFA)' },
+    { name: 'Tailwind CSS', proficiency: 65, bgColor: 'linear-gradient(83deg, #DEB544, #D5C896)' },
+    { name: 'JavaScript - ES5/ES6', proficiency: 70, bgColor: 'linear-gradient(83deg, #F7C596, #FF8886)' },
+    { name: 'React JS', proficiency: 80, bgColor: 'linear-gradient(83deg, #c97983, rgb(186 35 110))' },
+    { name: 'React-Router, Context API, Hooks, Formik', proficiency: 80, bgColor: 'linear-gradient(83deg, #88ffba, #048234)' },
+    { name: 'Redux/ Redux Toolkit', proficiency: 70, bgColor: 'linear-gradient(83deg, #b8933e, #f17c38)' },
+    { name: 'API - Integration, Fetch/Axios', proficiency: 85, bgColor: 'linear-gradient(83deg, #44DEC5, #4EBCFA)' },
+    { name: 'Bootstrap, React-Bootstrap', proficiency: 70, bgColor: 'linear-gradient(83deg, #67c4cd, rgb(0 13 117))' },
+    { name: 'Prime React, Ant-Design, Material-UI', proficiency: 75, bgColor: 'linear-gradient(83deg, #DEB544, #D5C896)' },
+    { name: 'Firebase', proficiency: 65, bgColor: 'linear-gradient(83deg, #F7C598, #FF8886)' },
+    { name: 'Microsoft Azure', proficiency: 70, bgColor: 'linear-gradient(83deg, #f0ff8f, #e1f43b)' },
+    { name: 'Git/ Git Hub', proficiency: 70, bgColor: 'linear-gradient(83deg, #f98a9c, #ff1e1a)' },
+    { name: 'Heroku/ Netlify', proficiency: 70, bgColor: 'linear-gradient(83deg, #8e8e8e, #564e67)' },
 
+];
+
+const Skills = () => {  
     return (
         <div className="skills-container">
-            <h3 className='pageTitle resp'>SKILLS</h3>
+            <h3 className="pageTitlee resp" style={{textAlign:"center"}}>SKILLS</h3>
             <br />
-            <ul className="skills-list">
-                <li>HTML</li>
-                <li>HTML5</li>
-                <li>CSS/ CSS3</li>
-                <li>Tailwind CSS</li>
-                <li>Bootstrap/React Bootstrap</li>
-                <li>JavaScript</li>
-                <li>React JS</li>
-                <li>Restful API's</li>
-                <li>State Management (Redux)</li>
-                <li>React UI Library (Prime React)</li>
-                <li>React UI Library (Material UI)</li>
-                <li>C++</li>
-                <li>Firebase</li>
-                <li>Azure DevOps</li>
-                <li>Git/ GitHub</li>
-            </ul>
-        </div>
+            <div className="skills-list">
+                {skillsData.map((skill, index) => (
+                    <div className="skill-card" key={index} style={{ background: skill.bgColor }}>
+                        <div className="skill-content">
+                            <h4>{skill.name}</h4>
+                            <div className="proficiency-bar" style={{ width: `${skill.proficiency}%` }}></div>
+                            <div className="proficiency-text textNone">{skill.proficiency}%</div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div >
     );
-}
+};
 
 export default Skills;

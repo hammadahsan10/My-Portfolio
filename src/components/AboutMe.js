@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import SocialIcons from "../components/SocialIcons";
 import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
-// import resume from "../pages/about/michael-yeates-resume.pdf";
+ import resume from "../pages/about/Hammad's Resume.pdf";
 
 const AboutMe = ({ name, email, location, availability, brand }) => {
   const [ref, inView] = useInView({
@@ -17,23 +17,22 @@ const AboutMe = ({ name, email, location, availability, brand }) => {
     setDownloading(false);
   }, [downloading]);
 
-  // const handleDownload = () => {
-  //   setDownloading(true);
-  //   const link = document.createElement("a");
-  //   link.href = resume;
-  //   link.download = "Michael-Yeates-Resume.pdf";
-  //   link.onload = () => {
-  //     link.remove();
-  //     setDownloading(false);
-  //   };
-  //   document.body.appendChild(link);
-  //   link.click();
-  // };
+  const handleDownload = () => {
+    setDownloading(true);
+    const link = document.createElement("a");
+    link.href = resume;
+    link.download = "Hammad's Resume.pdf";
+    link.onload = () => {
+      link.remove();
+      setDownloading(false);
+    };
+    document.body.appendChild(link);
+    link.click();
+  };
 
   return (
     <>
 
-      {/* <p style={{ color: "grey" }}>Stay tuned for updates!</p> */}
       <div className="aboutContainer container">
         <div className="row">
           <motion.div
@@ -43,7 +42,7 @@ const AboutMe = ({ name, email, location, availability, brand }) => {
             animate={inView ? { x: 0, opacity: 1 } : { x: "-10vw", opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
           >
-            <img src={aboutMeImg} alt={name} />
+            <img src={aboutMeImg} alt={name} className="img-top"/>
           </motion.div>
           <motion.div
             className="personalInfo col-12 col-lg-8"
@@ -55,7 +54,7 @@ const AboutMe = ({ name, email, location, availability, brand }) => {
 
             <div className="contentContainer">
               <h4>Nice to meet you</h4>
-              <h5>Hello! I'm Hammad Ahsan, a dedicated Front-end-Developer with 1.5 years of experience in React.js.</h5>
+              <h5>Hello! I'm Hammad Ahsan, a dedicated Front-end-Developer with 2 years of experience as React Developer.</h5>
               <div className="contentDescription">
                 <p>{brand}</p>
               </div>
@@ -85,9 +84,9 @@ const AboutMe = ({ name, email, location, availability, brand }) => {
               </div>
 
               <div className="buttonContainer">
-                {/* <button className="btn downloadCV" onClick={handleDownload}/> disabled={downloading}>
+                <button className="btn downloadCV" onClick={handleDownload}> {downloading}
                   {downloading ? "Downloading..." : "Download Resume"}
-                </button>{" "} */}
+                </button>{" "}
                 <SocialIcons />
               </div>
             </div>

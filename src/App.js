@@ -8,7 +8,7 @@ function App() {
     email: "hammadahsan07@gmail.com",
     availability: "Open for work",
     brand:
-      "With 1.5 years of React.js experience, I've crafted dynamic and responsive user interfaces, mastered state management, and optimized performance."
+      "Highly skilled React JS Developer with over 2 years of experience. Currently Working as a React Developer at App-In-Snap with over 1.5 years of experience, having a strong focus on API integration and expertise in building scalable, responsive web applications. Committed to contributing to the thriving tech industry, I embrace new challenges and seek opportunities for continuous professional growth"
   };
 
   return (

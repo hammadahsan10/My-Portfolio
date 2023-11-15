@@ -10,6 +10,7 @@ const Portfolio = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
+  
   const ProjectList = () =>
     projectData.map((project, i) => (
       <Project
@@ -20,12 +21,13 @@ const Portfolio = () => {
         image={project.image}
         color={project.bgcolor}
         github={project.github}
-        // deployed={project.deployed}
+        deployed={project.deployed}
         description={project.description}
       />
     ));
 
   return (
+
     <>
       <section className="portfolio container">
         <PageHeader title="Portfolio" description="View my work" />
@@ -34,6 +36,7 @@ const Portfolio = () => {
         </div>
       </section>
     </>
+
   );
 };
 
