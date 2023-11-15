@@ -24,10 +24,10 @@
   flex: 0 0 calc(33.333% - 20px);
   margin: 10px;
   padding: 15px;
-  border: 1px solid #ddd;
+  border: 2px solid #002d61;
   border-radius: 5px;
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 4px 8px #002d61;
   transition: transform 0.3s;
 }
 
@@ -51,7 +51,7 @@
 
 .proficiency-bar {
   height: 10px;
-  background: linear-gradient(83deg, #5590b8, #124e75);
+  background: linear-gradient(83deg, #5590b8, #96b8ce);
   width: 0;
   transition: width 0.8s ease;
   border-radius: 5px;
