@@ -16,7 +16,6 @@ const skillsData = [
     { name: 'Microsoft Azure', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
     { name: 'Git/ Git Hub', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
     { name: 'Heroku/ Netlify', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-
 ];
 
 const Skills = () => {  
