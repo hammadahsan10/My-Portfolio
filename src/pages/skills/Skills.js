@@ -21,20 +21,21 @@ const skillsData = [
 const Skills = () => {  
     return (
         <div className="skills-container">
-            <h3 className="pageTitlee resp" style={{textAlign:"center"}}>SKILLS</h3>
-            <br />
-            <div className="skills-list">
-                {skillsData.map((skill, index) => (
-                    <div className="skill-card" key={index} style={{ background: skill.bgColor }}>
-                        <div className="skill-content">
-                            <h4 style={{color:"lightcyan"}}>{skill.name}</h4>
-                            <div className="proficiency-bar" style={{ width: `${skill.proficiency}%` }}></div>
-                            <div className="proficiency-text textNone">{skill.proficiency}%</div>
-                        </div>
-                    </div>
-                ))}
+        <h3 className="pageTitlee resp" style={{textAlign:"center"}}>SKILLS</h3>
+        <br />
+        <div className="skills-list">
+          {skillsData.map((skill, index) => (
+            <div className="skill-card fade-in" key={index} style={{ background: skill.bgColor }}>
+              <div className="skill-content">
+                <h4 style={{color:"lightcyan"}}>{skill.name}</h4>
+                <div className="proficiency-bar" style={{ width: `${skill.proficiency}%` }}></div>
+                <div className="proficiency-text textNone">{skill.proficiency}%</div>
+              </div>
             </div>
-        </div >
+          ))}
+        </div>
+      </div>
+      
     );
 };
 

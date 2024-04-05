@@ -102,5 +102,83 @@
     "github": "https://github.com/hammadahsan10/Contact-Finder",
     "bgcolor": "rgb(51 255 212)",
     "id": "10"
+  },
+
+  {
+    "title": "Organization Health Solutions",
+    "image": "./projectImages/ohs.png",
+    "description": "Industrial project with live surveys for companies individuals, offering three types of surveys start, mid, end and gathering feedback, reviews",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact",
+    "deployed": "https://master.d3imonh729sy5h.amplifyapp.com/",
+    "github": "https://github.com/hammadahsan10/Organization-Health-Solutions-Front-end",
+    "bgcolor": "#009bcb",
+    "id": "11"
+  },
+
+  {
+    "title": "EU Studio",
+    "image": "./projectImages/eustudio.png",
+    "description": "Created a music player similar to Spotify with authentication, playlists, albums, categories, premium accounts, and room creation features",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact",
+    "deployed": "",
+    "github": "https://github.com/hammadahsan10/EU-Studio",
+    "bgcolor": "purple",
+    "id": "12"
+  },
+
+  {
+    "title": "Farmkar Portal",
+    "image": "./projectImages/farmkar.png",
+    "description": "Developed a project for rural areas connecting farmers, lenders, and customers for equipment import export and related services (Unable to provide the code due to company's policies)",
+    "technologies": "React JS | HTML/CSS/SCSS | React-Bootstrap | PrimeReact",
+    "deployed": "http://qa-farmkarreact.appinsnap.com/",
+    "github": "",
+    "bgcolor": "#798403",
+    "id": "13"
+  },
+
+  {
+    "title": "AIS Dashboard",
+    "image": "./projectImages/dashboard.png",
+    "description": "The company's product is used to manage project timelines, details, project billing status, PMO status, etc. It is currently live (Unable to provide the code due to company's policies)",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | React-Bootstrap",
+    "deployed": "http://aisdashboard.appinsnap.com/#/",
+    "github": "",
+    "bgcolor": "#191c24",
+    "id": "14"
+  },
+
+  {
+    "title": "HEC Attestation",
+    "image": "./projectImages/hec.png",
+    "description": "Developed an online platform for degree attestation starting from universities POC to HEC administration, utilizing blockchain data (Unable to provide the code and live link due to our policies)",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap",
+    "deployed": "",
+    "github": "",
+    "bgcolor": "lightblue",
+    "id": "15"
+  },
+
+  {
+    "title": "SadAmritsar",
+    "image": "./projectImages/sadamristar.png",
+    "description": "Client's project MERN stack application for maintaining people's data within their city",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap",
+    "deployed": "https://sadaamritsar.com/idcard-registration",
+    "github": "https://github.com/hammadahsan10/Sadamristar",
+    "bgcolor": "#ffa500",
+    "id": "16"
+   } ,
+
+  {
+    "title": "My Blogs",
+    "image": "./projectImages/blogs.png",
+    "description": "MERN stack application for adding, updating, and maintaining your blogs.",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact",
+    "deployed": "",
+    "github": "https://github.com/hammadahsan10/My-Blogs",
+    "bgcolor": "#211966",
+    "id": "17"
   }
+
 ]

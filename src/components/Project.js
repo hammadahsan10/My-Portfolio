@@ -26,7 +26,7 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
 
     <motion.div
       ref={ref}
-      className="col-sm-12 col-lg-6"
+      className="col-sm-12 col-lg-6 col-lg-4 col-xl-4"
       variants={variants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
@@ -37,10 +37,7 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
         className="projectCard d-flex align-items-center justify-content-center p-5"
         onClick={handleOpenModal}
       >
-        <div className="textWrap col-6 d-flex flex-column justify-content-center align-items-center m-5">
-          {/* <p className="tech">
-            <em>{technologies}</em>
-          </p> */}
+        <div className="textWrap col-6 d-flex flex-column justify-content-center align-items-center" style={{marginRight:"50px"}}>
           <h3 className="projectTitle">{title}</h3>
           <span className="viewWork">Project Details &#8594;</span>
         </div>
