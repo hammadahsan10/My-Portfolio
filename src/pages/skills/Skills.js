@@ -2,20 +2,23 @@ import React from 'react';
 import './Skills.css';
 
 const skillsData = [
-    { name: 'HTML/ HTML5', proficiency: 80, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'CSS/ CSS3/ SCSS', proficiency: 80, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
+    { name: 'HTML, HTML5', proficiency: 80, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
+    { name: 'CSS, CSS3, SCSS', proficiency: 80, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
     { name: 'Tailwind CSS', proficiency: 65, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'JavaScript - ES5/ES6', proficiency: 65, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
+    { name: 'JavaScript - (ES5,ES6)', proficiency: 65, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
     { name: 'React JS', proficiency: 80, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
     { name: 'React-Router, Context API, Hooks, Formik', proficiency: 80, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'Redux/ Redux Toolkit', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'API - Integration, Fetch/Axios', proficiency: 85, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
+    { name: 'Redux, Redux Toolkit', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
+    { name: 'API Integration - (Fetch,Axios)', proficiency: 85, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
+    { name: 'Hardware Integration', proficiency: 75, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
     { name: 'Bootstrap, React-Bootstrap', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
     { name: 'Prime React, Ant-Design, Material-UI', proficiency: 75, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
+    { name: 'MongoDB', proficiency: 65, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
+    { name: 'Node JS', proficiency: 65, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
     { name: 'Firebase', proficiency: 65, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
     { name: 'Microsoft Azure', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'Git/ Git Hub', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'Heroku/ Netlify', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
+    { name: 'Git, Git Hub', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
+    { name: 'Heroku, Netlify, Vercel', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
 ];
 
 const Skills = () => {  
