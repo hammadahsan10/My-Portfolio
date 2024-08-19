@@ -50,7 +50,7 @@ const Landing = ({ name }) => {
             onInit={(typewriter) => {
               typewriter
                 .changeDelay(80)
-                .typeString("I'm a Front-End/ React-Js Developer")
+                .typeString("I'm a MERN Stack Developer")
                 .pauseFor(1500)
                 .deleteAll()
                 .typeString("Code. ")

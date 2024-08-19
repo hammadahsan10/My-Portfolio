@@ -13,8 +13,8 @@ const skillsData = [
     { name: 'Hardware Integration', proficiency: 75, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
     { name: 'Bootstrap, React-Bootstrap', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
     { name: 'Prime React, Ant-Design, Material-UI', proficiency: 75, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'MongoDB', proficiency: 65, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'Node JS', proficiency: 65, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
+    { name: 'MongoDB', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
+    { name: 'Node JS - Express JS', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
     { name: 'Firebase', proficiency: 65, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
     { name: 'Microsoft Azure', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
     { name: 'Git, Git Hub', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
@@ -25,7 +25,6 @@ const Skills = () => {
     return (
         <div className="skills-container">
         <h3 className="pageTitlee resp" style={{textAlign:"center"}}>SKILLS</h3>
-        <br />
         <div className="skills-list">
           {skillsData.map((skill, index) => (
             <div className="skill-card fade-in" key={index} style={{ background: skill.bgColor }}>

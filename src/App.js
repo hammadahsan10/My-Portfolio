@@ -8,7 +8,7 @@ function App() {
     email: "hammadahsan07@gmail.com",
     availability: "Open for work",
     brand:
-      "Highly skilled React JS Developer with over 2 years of experience. Currently Working as a React Developer at App-In-Snap with over 1.5 years of experience, having a strong focus on API integration and expertise in building scalable, responsive web applications. Committed to contributing to the thriving tech industry, I embrace new challenges and seek opportunities for continuous professional growth"
+    "Highly skilled MERN Stack Developer with more than 2 years of industrial experience as a React Developer and 1 year as a MERN Developer. Currently working at App-In-Snap, with a strong focus on API integration and expertise in building scalable, responsive web applications using MongoDB and Node.js on the server side. Committed to contributing to the thriving tech industry, I embrace new challenges and seek opportunities for continuous professional growth."
   };
 
   return (
