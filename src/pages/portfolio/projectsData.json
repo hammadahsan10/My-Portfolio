@@ -1,43 +1,44 @@
 [
+
+  {
+    "title": "Xtreme Web App",
+    "image": "./projectImages/xtreme.png",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | Firebase | Node | MongoDB",
+    "description": "Developed an admin and client portal where profiles, workout plans, meal plan subscription plans, charts, statuses, chat application and AI-generated workout and meal plans are all managed",
+    "deployed":"",
+    "github":"",
+    "bgcolor": "#db143c",
+    "id": "1"
+  },
   {
     "title": "NCS-Railway",
     "image": "./projectImages/ncs.png",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | Node | Sql",
     "description": "Industrial project currently being used by Railways (Regrettably, I'm unable to provide the code due to our company's policies)",
     "deployed":"http://qa-ncs-railway.appinsnap.com/#/",
     "github":"",
     "bgcolor": "#29cbe0",
-    "id": "1"
+    "id": "2"
   },
   {
     "title": "APP-IN-SNAP CMS",
     "image": "./projectImages/ais.png",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | Node | Sql",
     "description": "Office Product that serves as a CMS(Content Management System) and HRMS(Human Resource Management System). (Regrettably, I'm unable to provide the code due to our company's policies)",
     "deployed":"http://cms.appinsnap.com/",
     "github":"",
     "bgcolor": "#6c4bf4",
-    "id": "2"
+    "id": "3"
   },
  
   {
     "title": "MSafa E-Commerce Website",
     "image": "./projectImages/msafa.png",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | MongoDB",
     "description": "Msafa E-Commerce Portal developed for Canadian Company (Unable to provide the code due to company's policies)",
     "github": "",
     "deployed":"http://qamsafa.appinsnap.com/#/",
     "bgcolor": "#00aa13",
-    "id": "3"
-  },
-  {
-    "title": "Burger Maker App",
-    "image": "./projectImages/burger.png",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap",
-    "description": "You can make and customize your own Burger by all ingredients with updated prices",
-    "github": "https://github.com/hammadahsan10/Burger-Maker-App",
-    "deployed":"",
-    "bgcolor": "rgb(215 170 126)",
     "id": "4"
   },
   {
@@ -51,6 +52,16 @@
     "id": "5"
   },
   {
+    "title": "Rahper Web App",
+    "image": "./projectImages/rahper.png",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | Google Apis",
+    "description": "Implemented a similar app to Rahper (Ride Share), featuring multiple functionalities like real-time ride booking, Google Maps APIs integration, and a chat system using Socket.io, all working seamlessly",
+    "deployed":"",
+    "github":"",
+    "bgcolor": "#3a88f4",
+    "id": "6"
+  },
+  {
     "title": "JS Wall",
     "image": "./projectImages/jswall_ss.png",
     "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact",
@@ -58,7 +69,7 @@
     "deployed":"http://jswall.appinsnap.com/",
     "github":"",
     "bgcolor": "#007c84",
-    "id": "6"
+    "id": "7"
   },
 
   {
@@ -69,7 +80,7 @@
     "github": "https://github.com/hammadahsan10/Retro-Design-Website",
     "deployed": "",
     "bgcolor": "rgb(255 225 133)",
-    "id": "7"
+    "id": "8"
   },
   {
     "title": "Masjid Azan Alert System",
@@ -79,7 +90,7 @@
     "github": "https://github.com/hammadahsan10/Masjid-Azan-Alert-System",
     "deployed":"",
     "bgcolor": "#f37737",
-    "id": "8"
+    "id": "9"
   },
 
   {
@@ -90,7 +101,7 @@
     "github": "https://github.com/hammadahsan10/Realtime-Chat-App",
     "deployed": "",
     "bgcolor": "rgb(101 134 255)",
-    "id": "9"
+    "id": "10"
   },
 
   {
@@ -101,7 +112,7 @@
     "github": "",
     "deployed": "",
     "bgcolor": "darkred",
-    "id": "10"
+    "id":"11"
   },
 
   {
@@ -112,7 +123,7 @@
     "deployed": "",
     "github": "https://github.com/hammadahsan10/Contact-Finder",
     "bgcolor": "rgb(51 255 212)",
-    "id": "11"
+    "id": "12"
   },
 
   {
@@ -123,7 +134,7 @@
     "deployed": "https://master.d3imonh729sy5h.amplifyapp.com/",
     "github": "https://github.com/hammadahsan10/Organization-Health-Solutions-Front-end",
     "bgcolor": "#009bcb",
-    "id": "12"
+    "id": "13"
   },
 
   {
@@ -134,7 +145,7 @@
     "deployed": "",
     "github": "https://github.com/hammadahsan10/EU-Studio",
     "bgcolor": "purple",
-    "id": "13"
+    "id": "14"
   },
 
   {
@@ -145,7 +156,7 @@
     "deployed": "http://qa-farmkarreact.appinsnap.com/",
     "github": "",
     "bgcolor": "#798403",
-    "id": "14"
+    "id": "15"
   },
 
   {
@@ -156,7 +167,7 @@
     "deployed": "http://aisdashboard.appinsnap.com/#/",
     "github": "",
     "bgcolor": "#191c24",
-    "id": "15"
+    "id": "16"
   },
 
   {
@@ -167,29 +178,7 @@
     "deployed": "",
     "github": "",
     "bgcolor": "lightblue",
-    "id": "16"
-  },
-
-  {
-    "title": "SadAmritsar",
-    "image": "./projectImages/sadamristar.png",
-    "description": "Client's project MERN stack application for maintaining people's data within their city",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap",
-    "deployed": "https://sadaamritsar.com/idcard-registration",
-    "github": "https://github.com/hammadahsan10/Sadamristar",
-    "bgcolor": "#ffa500",
     "id": "17"
-   } ,
-
-  {
-    "title": "My Blogs",
-    "image": "./projectImages/blogs.png",
-    "description": "MERN stack application for adding, updating, and maintaining your blogs.",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact",
-    "deployed": "",
-    "github": "https://github.com/hammadahsan10/My-Blogs",
-    "bgcolor": "#211966",
-    "id": "18"
   }
 
 ]
