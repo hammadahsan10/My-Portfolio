@@ -50,7 +50,7 @@ const Landing = ({ name }) => {
             onInit={(typewriter) => {
               typewriter
                 .changeDelay(80)
-                .typeString("I'm a MERN Stack Developer")
+                .typeString("I'm a FULL Stack Developer")
                 .pauseFor(1500)
                 .deleteAll()
                 .typeString("Code. ")
@@ -58,7 +58,6 @@ const Landing = ({ name }) => {
                 .typeString("Create. ")
                 .pauseFor(500)
                 .typeString("Innovate.")
-
                 .start();
             }}
           />

@@ -8,7 +8,7 @@ function App() {
     email: "hammadahsan07@gmail.com",
     availability: "Open for work",
     brand:
-    "Highly skilled MERN Stack Developer with more than 2 years of industrial experience as a React Developer and 1 year as a MERN Developer. Currently working at App-In-Snap, with a strong focus on API integration and expertise in building scalable, responsive web applications using MongoDB and Node.js on the server side. Committed to contributing to the thriving tech industry, I embrace new challenges and seek opportunities for continuous professional growth."
+    "Hi, myself Hammad, a passionate and driven Full-Stack Developer with 4 years of experience in building modern web applications using React.js, Next.js, Node.js, Express, MongoDB, MySQL, and PostgreSQL. I have strong expertise in both frontend development, creating responsive, high-performing user interfaces and backend development, designing secure, scalable APIs and efficient database structures. I thrive on learning and working with new and emerging technologies, constantly aiming to solve complex problems and create reliable, robust solutions. My goal is to contribute to innovative projects that make an impact while continuously growing and refining my skills. Let’s connect to explore opportunities and collaborate on impactful projects!"
   };
 
   return (

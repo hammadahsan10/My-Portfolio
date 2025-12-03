@@ -1,44 +1,128 @@
 import React from 'react';
 import './Skills.css';
 
-const skillsData = [
-    { name: 'HTML, HTML5', proficiency: 80, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'CSS, SCSS, Tailwind CSS', proficiency: 80, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'JavaScript - (ES5,ES6)', proficiency: 65, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'React JS', proficiency: 80, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'Next JS', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'React-Router, Context API, Hooks, Formik', proficiency: 80, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'Redux, Redux Toolkit', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'API Integration - (Fetch,Axios)', proficiency: 85, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'Hardware Integration', proficiency: 75, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'Bootstrap, React-Bootstrap', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'Prime React, Ant-Design, Material-UI', proficiency: 75, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'MongoDB', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'Node JS - Express JS', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'Socket.io/ FCM Token', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'Firebase', proficiency: 65, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'Microsoft Azure', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'Git, Git Hub', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-    { name: 'Heroku, Netlify, Vercel', proficiency: 70, bgColor: 'linear-gradient(83deg, #456e9d, rgb(4 12 78))' },
-];
+const skillsData = {
+  frontend: [
+    'HTML5',
+    'CSS3 / SCSS',
+    'Tailwind CSS',
+    'JavaScript (ES6+)',
+    'TypeScript',
+    'React.js',
+    'Next.js',
+    'Redux',
+    'Redux Toolkit',
+    'API Integration (Fetch / Axios)',
+    'PrimeReact',
+    'Material UI',
+    'Ant Design'
+  ],
+  database: [
+    'MongoDB',
+    'MySQL',
+    'PostgreSQL'
+  ],
+  backend: [
+    'Node.js (Express.js)',
+    'Nest.js',
+    'Socket.io',
+    'JWT Authentication',
+    'Cron Jobs',
+    'FCM Token',
+    'Payment Gateway',
+    'Hardware Integration'
+  ],
+  cloud: [
+    'Microsoft Azure',
+    'AWS',
+    'Heroku',
+    'Netlify',
+    'Vercel'
+  ],
+  tools: [
+    'Git',
+    'GitHub',
+    'GitLab',
+    'Firebase'
+  ]
+};
 
 const Skills = () => {  
     return (
         <div className="skills-container">
-        <h3 className="pageTitlee resp" style={{textAlign:"center"}}>SKILLS</h3>
-        <div className="skills-list">
-          {skillsData.map((skill, index) => (
-            <div className="skill-card fade-in" key={index} style={{ background: skill.bgColor }}>
-              <div className="skill-content">
-                <h4 style={{color:"lightcyan"}}>{skill.name}</h4>
-                <div className="proficiency-bar" style={{ width: `${skill.proficiency}%` }}></div>
-                <div className="proficiency-text textNone">{skill.proficiency}%</div>
+          <h3 className="pageTitlee resp" style={{textAlign:"center"}}>SKILLS</h3>
+          
+          <div className="skills-wrapper" style={{marginTop:"20px"}}>
+            {/* Left Section */}
+            <div className="skills-column left-column">
+              {/* Frontend */}
+              <div className="skill-category fade-in">
+                <h4 className="category-title">Frontend</h4>
+                <div className="skills-grid">
+                  {skillsData.frontend.map((skill, index) => (
+                    <div className="skill-badge" key={index}>
+                      {skill}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Backend */}
+              <div className="skill-category fade-in">
+                <h4 className="category-title">Backend</h4>
+                <div className="skills-grid">
+                  {skillsData.backend.map((skill, index) => (
+                    <div className="skill-badge" key={index}>
+                      {skill}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          ))}
+
+            {/* Divider */}
+            <div className="skills-divider"></div>
+
+            {/* Right Section */}
+            <div className="skills-column right-column">
+              {/* Database */}
+              <div className="skill-category fade-in">
+                <h4 className="category-title">Database</h4>
+                <div className="skills-grid">
+                  {skillsData.database.map((skill, index) => (
+                    <div className="skill-badge" key={index}>
+                      {skill}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Cloud & Deployment */}
+              <div className="skill-category fade-in">
+                <h4 className="category-title">Cloud & Deployment</h4>
+                <div className="skills-grid">
+                  {skillsData.cloud.map((skill, index) => (
+                    <div className="skill-badge" key={index}>
+                      {skill}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Tools & Version Control */}
+              <div className="skill-category fade-in">
+                <h4 className="category-title">Tools & Version Control</h4>
+                <div className="skills-grid">
+                  {skillsData.tools.map((skill, index) => (
+                    <div className="skill-badge" key={index}>
+                      {skill}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      
     );
 };
 
