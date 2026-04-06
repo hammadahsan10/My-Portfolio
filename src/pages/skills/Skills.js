@@ -1,5 +1,9 @@
 import React from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
+import PageHeader from '../../components/PageHeader';
 import './Skills.css';
+
+const ease = [0.16, 1, 0.3, 1];
 
 const skillsData = {
   frontend: [
@@ -20,7 +24,8 @@ const skillsData = {
   database: [
     'MongoDB',
     'MySQL',
-    'PostgreSQL'
+    'PostgreSQL',
+    'Supabase'
   ],
   backend: [
     'Node.js (Express.js)',
@@ -47,12 +52,22 @@ const skillsData = {
   ]
 };
 
-const Skills = () => {  
-    return (
-        <div className="skills-container">
-          <h3 className="pageTitlee resp" style={{textAlign:"center"}}>SKILLS</h3>
-          
-          <div className="skills-wrapper" style={{marginTop:"20px"}}>
+const Skills = () => {
+  const reduceMotion = useReducedMotion();
+
+  const wrapperMotion = reduceMotion
+    ? { initial: false }
+    : {
+        initial: { opacity: 0, y: 36 },
+        whileInView: { opacity: 1, y: 0 },
+        viewport: { once: true, amount: 0.14 },
+        transition: { duration: 0.72, ease },
+      };
+
+  return (
+        <div className="skills-container container">
+          <PageHeader title="Skills" description="Tech stack & tools" />
+          <motion.div className="skills-wrapper" {...wrapperMotion}>
             {/* Left Section */}
             <div className="skills-column left-column">
               {/* Frontend */}
@@ -121,7 +136,7 @@ const Skills = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
     );
 };

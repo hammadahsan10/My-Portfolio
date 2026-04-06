@@ -1,16 +1,9 @@
 import projectData from "./projectsData.json";
 import Project from "../../components/Project";
 import PageHeader from "../../components/PageHeader";
-import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React from "react";
 
 const Portfolio = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
-  
   const ProjectList = () =>
     projectData.map((project, i) => (
       <Project
@@ -27,16 +20,16 @@ const Portfolio = () => {
     ));
 
   return (
-
     <>
       <section className="portfolio container">
-        <PageHeader title="Portfolio" description="View my work" />
-        <div className="row">
+        <div className="experience-inner container">
+          <PageHeader title="Projects" description="View my work" />
+        </div>
+        <div className="row portfolio-grid">
           <ProjectList />
         </div>
       </section>
     </>
-
   );
 };
 

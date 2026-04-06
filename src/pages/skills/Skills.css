@@ -11,13 +11,17 @@
 }
 
 .skills-container {
-  max-width: 1400px;
-  margin: auto;
-  padding: 20px;
-  height: calc(100vh - 93px);
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: calc(100vh - var(--header-height));
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+.skills-container .page-heading {
+  flex-shrink: 0;
 }
 
 .skills-wrapper {
@@ -117,14 +121,14 @@
   font-size: 13px;
   font-weight: 500;
   border: 1px solid rgba(72, 163, 198, 0.5);
-  transition: all 0.3s ease;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, background 0.45s ease, color 0.35s ease;
   cursor: default;
   box-shadow: 0 3px 10px rgba(0, 45, 97, 0.4);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .skill-badge:hover {
-  transform: translateY(-4px) scale(1.08);
+  transform: translateY(-5px) scale(1.06);
   box-shadow: 0 6px 20px rgba(72, 163, 198, 0.6);
   border-color: var(--hl-color);
   background: linear-gradient(135deg, 
@@ -132,17 +136,6 @@
     rgba(72, 163, 198, 0.9),
     rgba(69, 110, 157, 0.85));
   color: #ffffff;
-}
-
-.pageTitlee {
-  color: #f3f3f3;
-  font-size: 36px;
-  max-width: 130px !important;
-  border-bottom: 3px solid var(--hl-color);
-  text-align: center;
-  margin: 0 auto !important;
-  margin-bottom: 30px !important;
-  flex-shrink: 0;
 }
 
 @keyframes fadeIn {
@@ -204,7 +197,7 @@
 
 @media (max-width: 768px) {
   .skills-container {
-    padding: 15px;
+    padding: 0 15px;
     height: auto;
     overflow: visible;
   }
@@ -252,10 +245,5 @@
   .skill-badge {
     padding: 8px 14px;
     font-size: 12px;
-  }
-
-  .pageTitlee {
-    font-size: 28px;
-    margin-bottom: 20px !important;
   }
 }

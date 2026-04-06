@@ -1,16 +1,13 @@
 import aboutMeImg from "../images/mypic.jpg";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import SocialIcons from "../components/SocialIcons";
-import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
- import resume from "../pages/about/Hammad Ahsan's Resume.pdf";
+import resume from "../pages/about/Hammad Ahsan's Resume.pdf";
+
+const ease = [0.16, 1, 0.3, 1];
 
 const AboutMe = ({ name, email, location, availability, brand }) => {
-  const [ref, inView] = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
-  });
-
+  const reduceMotion = useReducedMotion();
   const [downloading, setDownloading] = useState(false);
 
   useEffect(() => {
@@ -30,31 +27,34 @@ const AboutMe = ({ name, email, location, availability, brand }) => {
     link.click();
   };
 
+  const imgAnim = reduceMotion
+    ? { initial: false }
+    : {
+        initial: { opacity: 0, x: -32 },
+        whileInView: { opacity: 1, x: 0 },
+        viewport: { once: true, amount: 0.25 },
+        transition: { duration: 0.62, ease },
+      };
+
+  const textAnim = reduceMotion
+    ? { initial: false }
+    : {
+        initial: { opacity: 0, x: 32 },
+        whileInView: { opacity: 1, x: 0 },
+        viewport: { once: true, amount: 0.25 },
+        transition: { duration: 0.62, ease, delay: 0.08 },
+      };
+
   return (
     <>
-
       <div className="aboutContainer container">
         <div className="row">
-          <motion.div
-            className="personalImage col-12 col-lg-4"
-            ref={ref}
-            initial={{ x: "-10vw", opacity: 0 }}
-            animate={inView ? { x: 0, opacity: 1 } : { x: "-10vw", opacity: 0 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-          >
-            <img src={aboutMeImg} alt={name} className="img-top"/>
+          <motion.div className="personalImage col-12 col-lg-4" {...imgAnim}>
+            <img src={aboutMeImg} alt={name} className="img-top" />
           </motion.div>
-          <motion.div
-            className="personalInfo col-12 col-lg-8"
-            ref={ref}
-            initial={{ x: "10vw", opacity: 0 }}
-            animate={inView ? { x: 0, opacity: 1 } : { x: "10vw", opacity: 0 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-          >
-
+          <motion.div className="personalInfo col-12 col-lg-8" {...textAnim}>
             <div className="contentContainer">
               <h4>Nice to meet you</h4>
-              {/* <h5>Hello! I'm Hammad Ahsan, a dedicated Front-end-Developer with 2 years of industrial experience as React Developer.</h5> */}
               <div className="contentDescription">
                 <p>{brand}</p>
               </div>
@@ -84,7 +84,8 @@ const AboutMe = ({ name, email, location, availability, brand }) => {
               </div>
 
               <div className="buttonContainer">
-                <button className="btn downloadCV" onClick={handleDownload}> {downloading}
+                <button className="btn downloadCV" onClick={handleDownload}>
+                  {downloading}
                   {downloading ? "Downloading..." : "Download Resume"}
                 </button>{" "}
                 <SocialIcons />

@@ -6,8 +6,10 @@ import Form from "../../components/Form";
 const Contact = ({ name, email, location }) => {
   return (
     <section className="contact">
-      <PageHeader title="Contact" description="Get in touch" />
-      <div className="contactWrap container">
+      <div className="container contact-intro">
+        <PageHeader title="Contact" description="Get in touch" />
+      </div>
+      <div className="contactWrap container" style={{ marginBottom: '40px' }}>
         <div className="row">
         <div className="col-12 col-lg-6">
               <Form />

@@ -5,10 +5,13 @@ import SocialIcons from "../../components/SocialIcons";
 const Landing = ({ name }) => {
   const styles = {
     landing: {
-      height: "calc(100% - 93px)",
+      minHeight: "calc(100vh - var(--header-height))",
+      width: "100%",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
+      position: "relative",
+      overflow: "hidden",
     },
 
     landingImage: {
@@ -32,7 +35,7 @@ const Landing = ({ name }) => {
     name: {
       color: "#fff",
       fontWeight: "700",
-      marginTop: "-100px",
+      marginTop: "0",
       paddingBottom: "28px",
     },
   };
@@ -65,7 +68,7 @@ const Landing = ({ name }) => {
       </div>
       <div className="image-container">
       </div>
-      <SocialIcons />
+      {/* <SocialIcons /> */}
     </section>
   );
 };

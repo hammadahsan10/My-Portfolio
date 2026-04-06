@@ -1,184 +1,212 @@
 [
-
+  {
+    "title": "Leadelta",
+    "image": "./projectImages/leadelta.png",
+    "technologies": "Next JS | Nest JS | Typescript | ShadCN UI | MongoDB | VapiAi | Hubspot | Twilio | OpenAI | Google Apis",
+    "description": "Developed an AI-powered platform (Leadelta) with Admin and Client portals to automate customer interactions and lead management. Implemented Voice, SMS, and Inbound/Outbound agents for seamless communication using Vapi AI via Twilio. Provided full control for users to configure and manage agent settings as per their needs. Built continuous learning features to improve agent performance over time. Enabled automated booking through AI agents. Integrated HubSpot CRM for lead generation and implemented workflow automation.",
+    "deployed": "https://leadelta.vercel.app/",
+    "bgcolor": "#e11d48",
+    "company": true,
+    "id": "1"
+  },
   {
     "title": "Xtreme Web App",
     "image": "./projectImages/xtreme.png",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | Firebase | Node | MongoDB",
+    "technologies": "React JS | Node JS | Bootstrap | PrimeReact | Firebase| OpenAi | MongoDB",
     "description": "Developed an admin and client portal where profiles, workout plans, meal plan subscription plans, charts, statuses, chat application and AI-generated workout and meal plans are all managed",
-    "deployed":"",
-    "github":"",
-    "bgcolor": "#db143c",
-    "id": "1"
+    "deployed": "",
+    "bgcolor": "#f97316",
+    "company": false,
+    "id": "2"
   },
   {
     "title": "NCS-Railway",
     "image": "./projectImages/ncs.png",
     "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | Node | Sql",
-    "description": "Industrial project currently being used by Railways (Regrettably, I'm unable to provide the code due to our company's policies)",
-    "deployed":"http://qa-ncs-railway.appinsnap.com/#/",
-    "github":"",
-    "bgcolor": "#29cbe0",
-    "id": "2"
+    "description": "Industrial project in production for the railways, with dedicated admin and ticketing portals. Tickets are processed automatically with full features including printing, fares, booking, train timetables, and complete operational management.",
+    "deployed": "http://qa-ncs-railway.appinsnap.com/#/",
+    "bgcolor": "#0ea5e9",
+    "company": true,
+    "id": "3"
+  },
+  {
+    "title": "ZiggleBee",
+    "image": "./projectImages/ziggle.png",
+    "technologies": "Next JS | Nest JS | Typescript | Material UI | Twilio | MongoDB | Stripe",
+    "description": "Developed ZiggleBee, an accessibility-focused platform for disabled users with Admin and Owner portals. Implemented subscription-based plans with Stripe integration for automated payments and feature access control. Built a template builder system to create accessible content. The platform enables users to manage subscriptions, features, and settings with ease while ensuring an inclusive experience.",
+    "deployed": "https://zigglebee-1.vercel.app",
+    "bgcolor": "#14b8a6",
+    "company": true,
+    "id": "4"
+  },
+  {
+    "title": "Playli",
+    "image": "./projectImages/playli.png",
+    "technologies": "React JS | Node JS | MySql | ShadCN | Bootstrap",
+    "description": "Playli is a digital platform designed to connect people through real-world sports. It allows users to find nearby players, join open games, or create their own sports activities. The main purpose of Playli is to bring everyday athletes together, making it easier to organize games and build a local sports community. The platform facilitates connections between players but does not manage or control the events themselves.",
+    "deployed": "https://playli-user-c572970ee529.herokuapp.com/",
+    "bgcolor": "#7c3aed",
+    "company": true,
+    "id": "5"
+  },
+  {
+    "title": "Ultramarble",
+    "image": "./projectImages/ulta.png",
+    "technologies": "Next JS | Nest Js | Laravel | Typescript | Material UI | MySql",
+    "description": "A job-driven workflow where work orders are created and customized for marble and related products. The system builds full visualizations with dimensions and product features, renders marble layouts, and assigns tasks to team staff.",
+    "deployed": "https://ultra-marbel-admin-omega.vercel.app/",
+    "bgcolor": "#6366f1",
+    "company": true,
+    "id": "6"
   },
   {
     "title": "APP-IN-SNAP CMS",
     "image": "./projectImages/ais.png",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | Node | Sql",
-    "description": "Office Product that serves as a CMS(Content Management System) and HRMS(Human Resource Management System). (Regrettably, I'm unable to provide the code due to our company's policies)",
-    "deployed":"http://cms.appinsnap.com/",
-    "github":"",
-    "bgcolor": "#6c4bf4",
-    "id": "3"
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | Node | MySql",
+    "description": "An in-house office product that works as a CMS (Content Management System) and HRMS (Human Resource Management System), covering employees, leave, attendance, timelines, invoices, events, and many additional operational features.",
+    "deployed": "http://cms.appinsnap.com/",
+    "bgcolor": "#2563eb",
+    "company": true,
+    "id": "7"
   },
- 
+  {
+    "title": "QED E-Democracy",
+    "image": "./projectImages/qed.png",
+    "technologies": "Next JS | Nest JS | Typescript | Material UI | MongoDB | Google Earth",
+    "description": "A product used for structured voting across four time-based slots with configurable timers per phase. Participants raise issues, discuss solutions, cast votes, and produce finalized results.",
+    "deployed": "https://qed-ten.vercel.app/",
+    "bgcolor": "#0891b2",
+    "company": true,
+    "id": "8"
+  },
   {
     "title": "MSafa E-Commerce Website",
     "image": "./projectImages/msafa.png",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | MongoDB",
-    "description": "Msafa E-Commerce Portal developed for Canadian Company (Unable to provide the code due to company's policies)",
-    "github": "",
-    "deployed":"http://qamsafa.appinsnap.com/#/",
-    "bgcolor": "#00aa13",
-    "id": "4"
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | Node JS | Stripe | MongoDB",
+    "description": "Msafa e-commerce portal developed for a Canadian company: a full-featured online store with products, categories, orders, payment gateway integration, and end-to-end shopping flows.",
+    "deployed": "http://qamsafa.appinsnap.com/#/",
+    "bgcolor": "#059669",
+    "company": true,
+    "id": "9"
+  },
+  {
+    "title": "Quiz Voyage",
+    "image": "./projectImages/quiz.jpeg",
+    "technologies": "Next JS | Nest JS | Typescript | PrimeReact UI | MongoDB",
+    "description": "A complete quiz platform for O/A levels and matric students with multiple quiz types—chapter-wise, subject-wise, mock exams, and practice tests—plus progress records, statistics, rankings, and dedicated admin and student portals.",
+    "deployed": "",
+    "bgcolor": "#84cc16",
+    "company": false,
+    "id": "10"
   },
   {
     "title": "Warehouse MS",
     "image": "./projectImages/wms.png",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | Hardware Integration",
-    "description": "Developed a product based warehouse management system for Finland, also used as a product, where dynamic modules, permissions, inventory, assets, and RFID labeling are managed. This system also integrates hardware for RFID scanners. (Regrettably, I'm unable to provide the code due to company's policies)",
-    "deployed":"https://qa-wms.appinsnap.com/",
-    "github":"",
-    "bgcolor": "#8d7ad5",
-    "id": "5"
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | Node JS | Hardware Zebra RFID Scanner Integration",
+    "description": "Developed a product-based warehouse management system for Finland, also offered as a standalone product, where dynamic modules, permissions, inventory, assets, and RFID labeling are managed. The system integrates Zebra RFID scanner hardware for on-site operations.",
+    "deployed": "https://qa-wms.appinsnap.com/",
+    "bgcolor": "#a855f7",
+    "company": true,
+    "id": "11"
   },
   {
     "title": "Rahper Web App",
     "image": "./projectImages/rahper.png",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | Google Apis",
-    "description": "Implemented a similar app to Rahper (Ride Share), featuring multiple functionalities like real-time ride booking, Google Maps APIs integration, and a chat system using Socket.io, all working seamlessly",
-    "deployed":"",
-    "github":"",
-    "bgcolor": "#3a88f4",
-    "id": "6"
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | Node JS | MongoDB | Google Apis",
+    "description": "Implemented a ride-sharing style application similar in scope to Rahper, with real-time ride booking, Google Maps API integration, and a Socket.io chat system working together end to end.",
+    "deployed": "",
+    "bgcolor": "#3b82f6",
+    "company": true,
+    "id": "12"
   },
   {
     "title": "JS Wall",
     "image": "./projectImages/jswall_ss.png",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact",
-    "description": "Industrial project currently being used by JS Bank. (Regrettably, I'm unable to provide the code due to company's policies)",
-    "deployed":"http://jswall.appinsnap.com/",
-    "github":"",
-    "bgcolor": "#007c84",
-    "id": "7"
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | Node JS | MongoDB",
+    "description": "Industrial project in use at JS Bank, where comprehensive customer data is managed under strict controls for stronger security and compliance.",
+    "deployed": "http://jswall.appinsnap.com/",
+    "bgcolor": "#0f766e",
+    "company": true,
+    "id": "13"
   },
-
-  {
-    "title": "Retro Design Website",
-    "image": "./projectImages/retro-ss.png",
-    "description": "Static Retro Design Newspaper to make it vintage look",
-    "technologies": "HTML/CSS/SCSS | Bootstrap",
-    "github": "https://github.com/hammadahsan10/Retro-Design-Website",
-    "deployed": "",
-    "bgcolor": "rgb(255 225 133)",
-    "id": "8"
-  },
-  {
-    "title": "Masjid Azan Alert System",
-    "image": "./projectImages/mosque.png",
-    "description": "Azan alarm application that dynamically triggers prayer call sounds during prayer times, it allows users to seamlessly add mosque details, including their prayer timings, directly within the app",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap",
-    "github": "https://github.com/hammadahsan10/Masjid-Azan-Alert-System",
-    "deployed":"",
-    "bgcolor": "#f37737",
-    "id": "9"
-  },
-
-  {
-    "title": "Realtime Chat-box",
-    "image": "./projectImages/chat-ss.png",
-    "description": "Real-time Chatbox with Gmail Authentication for Multiple Users",
-    "technologies": "React JS | Firebase | HTML/CSS/SCSS | Bootstrap | Material-UI",
-    "github": "https://github.com/hammadahsan10/Realtime-Chat-App",
-    "deployed": "",
-    "bgcolor": "rgb(101 134 255)",
-    "id": "10"
-  },
-
   {
     "title": "SYS-Corp Company's Website",
     "image": "./projectImages/syc.png",
-    "description": "Designed a webiste for US-Based Company. (Regrettably, Unable to provide the code due to company's policies)",
+    "description": "Designed a marketing website for a US-based company with a subtle AI-inspired visual theme.",
     "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | React Animations",
-    "github": "",
     "deployed": "",
-    "bgcolor": "darkred",
-    "id":"11"
+    "bgcolor": "#dc2626",
+    "company": false,
+    "id": "14"
   },
-
-  {
-    "title": "Contact Finder",
-    "image": "./projectImages/contact_ss.png",
-    "description": "Industrial project being used to filter out all the duplicate and Unique records from Excel Sheet. (Regrettably, I'm unable to provide the code due to our company's policies)",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact",
-    "deployed": "",
-    "github": "https://github.com/hammadahsan10/Contact-Finder",
-    "bgcolor": "rgb(51 255 212)",
-    "id": "12"
-  },
-
   {
     "title": "Organization Health Solutions",
     "image": "./projectImages/ohs.png",
-    "description": "Industrial project with live surveys for companies individuals, offering three types of surveys start, mid, end and gathering feedback, reviews",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact",
+    "description": "Industrial project with live surveys for companies and individuals, offering three survey phases—start, mid, and end—and collecting structured feedback and reviews.",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | Node JS | MongoDB",
     "deployed": "https://master.d3imonh729sy5h.amplifyapp.com/",
-    "github": "https://github.com/hammadahsan10/Organization-Health-Solutions-Front-end",
-    "bgcolor": "#009bcb",
-    "id": "13"
+    "bgcolor": "#0284c7",
+    "company": false,
+    "id": "15"
   },
-
+  {
+    "title": "Contact Finder",
+    "image": "./projectImages/contact_ss.png",
+    "description": "Industrial tool used to separate duplicate and unique records from large Excel files, tuned to stay fast on very heavy datasets with additional productivity features.",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | Node JS | MongoDB",
+    "deployed": "",
+    "bgcolor": "#10b981",
+    "company": true,
+    "id": "16"
+  },
   {
     "title": "EU Studio",
     "image": "./projectImages/eustudio.png",
     "description": "Created a music player similar to Spotify with authentication, playlists, albums, categories, premium accounts, and room creation features",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | Node JS | MongoDB",
     "deployed": "",
-    "github": "https://github.com/hammadahsan10/EU-Studio",
-    "bgcolor": "purple",
-    "id": "14"
+    "bgcolor": "#d946ef",
+    "company": false,
+    "id": "17"
   },
-
+  {
+    "title": "Grab and Eat",
+    "image": "./projectImages/eat.png",
+    "description": "A restaurant application where customers browse the menu by category, place orders online, and complete checkout through an integrated payment gateway, with a polished UI focused on usability.",
+    "technologies": "Next JS | Nest JS | Stripe | React-Bootstrap | PrimeReact | Node JS | MongoDB",
+    "deployed": "http://qa-farmkarreact.appinsnap.com/",
+    "bgcolor": "#f59e0b",
+    "company": false,
+    "id": "18"
+  },
   {
     "title": "Farmkar Portal",
     "image": "./projectImages/farmkar.png",
-    "description": "Developed a project for rural areas connecting farmers, lenders, and customers for equipment import export and related services (Unable to provide the code due to company's policies)",
-    "technologies": "React JS | HTML/CSS/SCSS | React-Bootstrap | PrimeReact",
+    "description": "Developed a project for rural areas connecting farmers, lenders, and customers for equipment import, export, and related services",
+    "technologies": "React JS | PrimeReact | React-Bootstrap | Node JS | MongoDB",
     "deployed": "http://qa-farmkarreact.appinsnap.com/",
-    "github": "",
-    "bgcolor": "#798403",
-    "id": "15"
+    "bgcolor": "#65a30d",
+    "company": true,
+    "id": "19"
   },
-
   {
     "title": "AIS Dashboard",
     "image": "./projectImages/dashboard.png",
-    "description": "The company's product is used to manage project timelines, details, project billing status, PMO status, etc. It is currently live (Unable to provide the code due to company's policies)",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | React-Bootstrap",
+    "description": "The company's product is used to manage project timelines, details, project billing status, PMO status, etc. It is currently live",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact Ui | React-Bootstrap | Node JS | MongoDB",
     "deployed": "http://aisdashboard.appinsnap.com/#/",
-    "github": "",
-    "bgcolor": "#191c24",
-    "id": "16"
+    "bgcolor": "#475569",
+    "company": true,
+    "id": "20"
   },
-
   {
     "title": "HEC Attestation",
     "image": "./projectImages/hec.png",
     "description": "Developed an online platform for degree attestation starting from universities POC to HEC administration, utilizing blockchain data (Unable to provide the code and live link due to our policies)",
-    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap",
+    "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | Node JS | MongoDB",
     "deployed": "",
-    "github": "",
-    "bgcolor": "lightblue",
-    "id": "17"
+    "bgcolor": "#38bdf8",
+    "company": true,
+    "id": "21"
   }
-
 ]

@@ -1,39 +1,17 @@
-import { Routes, Route, useLocation, Navigate } from "react-router-dom";
-import Landing from "../pages/landing/Landing";
-import About from "../pages/about/About";
-import Portfolio from "../pages/portfolio/Portfolio";
-import Contact from "../pages/contact/Contact";
-import Skills from "../pages/skills/Skills";
-import PageNotFound from "../pages/404/PageNotFound";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Home from "../pages/Home";
 
 const AnimatedRoutes = ({ personalDetails }) => {
-  const location = useLocation();
-
   return (
-    <Routes location={location} key={location.pathname}>
-      <Route path="/" element={<Landing name={personalDetails.name} tagline={personalDetails.tagline} />} />
-      <Route
-        path="/about"
-        element={
-          <About
-            name={personalDetails.name}
-            location={personalDetails.location}
-            email={personalDetails.email}
-            availability={personalDetails.availability}
-            brand={personalDetails.brand}
-          />
-        }
-      />
-      <Route path="/portfolio" element={<Portfolio />} />
-      <Route path="/skills" element={<Skills />} />
-      <Route
-        path="/contact"
-        element={
-          <Contact name={personalDetails.name} location={personalDetails.location} email={personalDetails.email} />
-        }
-      />
-      <Route path="/page-not-found" element={<PageNotFound />} />
-      <Route path="*" element={<Navigate to="/page-not-found" />} />
+    <Routes>
+      <Route path="/" element={<Home personalDetails={personalDetails} />} />
+      <Route path="/about" element={<Navigate to={{ pathname: "/", hash: "#about" }} replace />} />
+      <Route path="/experience" element={<Navigate to={{ pathname: "/", hash: "#experience" }} replace />} />
+      <Route path="/portfolio" element={<Navigate to={{ pathname: "/", hash: "#portfolio" }} replace />} />
+      <Route path="/skills" element={<Navigate to={{ pathname: "/", hash: "#skills" }} replace />} />
+      <Route path="/contact" element={<Navigate to={{ pathname: "/", hash: "#contact" }} replace />} />
+      <Route path="/page-not-found" element={<Navigate to="/" replace />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 };

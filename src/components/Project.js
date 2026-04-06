@@ -5,6 +5,14 @@ import { useEffect, useState } from "react";
 import closeModal from "../images/close.svg";
 
 const Project = ({ technologies, title, image, color, id, github, deployed, description }) => {
+  const hexToRgba = (hex, alpha) => {
+    const validHex = hex?.replace("#", "");
+    if (!validHex || validHex.length !== 6) return `rgba(15, 23, 42, ${alpha})`;
+    const r = parseInt(validHex.slice(0, 2), 16);
+    const g = parseInt(validHex.slice(2, 4), 16);
+    const b = parseInt(validHex.slice(4, 6), 16);
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  };
 
   const [ref, inView] = useInView({
     threshold: 0.5,
@@ -12,7 +20,7 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
   });
 
   const variants = {
-    hidden: { x: id % 2 === 0 ? "10vw" : "-10vw", opacity: 0 },
+    hidden: { x: id % 2 === 0 ? 40 : -40, opacity: 0 },
     visible: { x: 0, opacity: 1 },
   };
 
@@ -30,10 +38,12 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
       variants={variants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
+      transition={{ duration: 0.62, ease: [0.16, 1, 0.3, 1] }}
     >
       <div
-        style={{ backgroundColor: color }}
+        style={{
+          backgroundImage: `linear-gradient(135deg, ${hexToRgba(color, 0.95)} 0%, ${hexToRgba(color, 0.78)} 50%, rgba(15, 23, 42, 0.92) 100%)`,
+        }}
         className="projectCard d-flex align-items-center justify-content-center p-5"
         onClick={handleOpenModal}
       >

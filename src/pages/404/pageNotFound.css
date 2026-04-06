@@ -5,10 +5,6 @@
   margin-top: var(--spacing);
 }
 
-.error .pageTitle {
-  border-bottom-color: red;
-}
-
 .error-description {
   color: red;
 }

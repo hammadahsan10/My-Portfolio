@@ -1,14 +1,41 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useSectionNav } from "../hooks/useSectionNav";
 
 import openMenu from "../images/open.svg";
 import closeMenu from "../images/close.svg";
 
+const navItems = [
+  { id: "home", label: "Home" },
+  { id: "about", label: "About" },
+  { id: "experience", label: "Experience" },
+  { id: "portfolio", label: "Projects" },
+  { id: "skills", label: "Skills" },
+  { id: "contact", label: "Contact" },
+];
+
 const NavLinks = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const goToSection = useSectionNav();
+
+  const isActive = (id) => {
+    const hash = location.hash || "";
+    if (id === "home") {
+      return !hash || hash === "#home";
+    }
+    return hash === `#${id}`;
+  };
+
+  const handleNav = (e, id) => {
+    e.preventDefault();
+    goToSection(id);
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
-      <button className="dropdown-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+      <button className="dropdown-toggle" type="button" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         {isMenuOpen ? (
           <img className="closeMenu" src={closeMenu} alt="Close" />
         ) : (
@@ -16,22 +43,16 @@ const NavLinks = () => {
         )}
       </button>
       <nav className={`links ${isMenuOpen ? "open" : "closed"}`}>
-        <NavLink to="/" onClick={() => setIsMenuOpen(false)}>
-          Home
-        </NavLink>
-        <NavLink to="/about" onClick={() => setIsMenuOpen(false)}>
-          About
-        </NavLink>
-        <NavLink to="/portfolio" onClick={() => setIsMenuOpen(false)}>
-          Projects
-        </NavLink>
-        <NavLink to="/skills" onClick={() => setIsMenuOpen(false)}>
-          Skills
-        </NavLink>
-        <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>
-          Contact
-        </NavLink>
-        
+        {navItems.map(({ id, label }) => (
+          <a
+            key={id}
+            href={`#${id}`}
+            className={isActive(id) ? "active" : ""}
+            onClick={(e) => handleNav(e, id)}
+          >
+            {label}
+          </a>
+        ))}
       </nav>
     </>
   );
