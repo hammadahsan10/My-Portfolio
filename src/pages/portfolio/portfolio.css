@@ -4,7 +4,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
+  width: 100%;
 }
 
 .projectCard {
@@ -32,6 +34,54 @@
   }
   .projectCard:hover {
     transform: none;
+  }
+}
+
+/* --- Project cards: mobile (stack, full width) — desktop rules unchanged below 750px block --- */
+@media (max-width: 749px) {
+  .portfolio-grid {
+    width: 100%;
+  }
+
+  .projectCard {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    height: auto !important;
+    min-height: 0;
+    padding: 1.15rem !important;
+  }
+
+  .projectCard .textWrap,
+  .projectCard .imageContainer {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 auto !important;
+    margin-right: 0 !important;
+    transform: none !important;
+  }
+
+  .projectCard .textWrap {
+    align-items: center !important;
+    text-align: center;
+    margin-bottom: 0.85rem;
+  }
+
+  .projectCard .imageContainer img {
+    margin-top: 0 !important;
+    height: auto !important;
+    max-height: min(220px, 42vh);
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .projectTitle {
+    font-size: clamp(1rem, 4.2vw, 1.15rem);
+    padding: 6px 0;
+  }
+
+  .viewWork {
+    font-size: 13px;
   }
 }
 
@@ -318,6 +368,17 @@
     flex-direction: row;
     padding: var(--sm-spacing) !important;
     height: 350px;
+  }
+
+  .projectCard .textWrap {
+    margin-right: 50px;
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .projectCard .imageContainer {
+    flex: 1 1 0;
+    min-width: 0;
   }
 
   .imageContainer {

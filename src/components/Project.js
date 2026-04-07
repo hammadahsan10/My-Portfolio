@@ -15,7 +15,9 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
   };
 
   const [ref, inView] = useInView({
-    threshold: 0.5,
+    /* Mobile: 50% threshold often never fires — cards stay opacity:0 */
+    threshold: 0.08,
+    rootMargin: "0px 0px 12% 0px",
     triggerOnce: true,
   });
 
@@ -43,17 +45,14 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
         style={{
           backgroundImage: `linear-gradient(135deg, ${hexToRgba(color, 0.95)} 0%, ${hexToRgba(color, 0.78)} 50%, rgba(15, 23, 42, 0.92) 100%)`,
         }}
-        className="projectCard d-flex align-items-center justify-content-center p-5"
+        className="projectCard d-flex align-items-center justify-content-center project-card-inner"
         onClick={handleOpenModal}
       >
-        <div
-          className="textWrap col-6 d-flex flex-column justify-content-center align-items-center"
-          style={{ marginRight: "50px" }}
-        >
+        <div className="textWrap project-card-text d-flex flex-column justify-content-center align-items-center">
           <h3 className="projectTitle">{title}</h3>
           <span className="viewWork">Project Details &#8594;</span>
         </div>
-        <div className="imageContainer col-6 d-flex align-items-center justify-content-center">
+        <div className="imageContainer project-card-media d-flex align-items-center justify-content-center">
           <img src={image} alt="Laptop displaying the application" />
         </div>
       </div>

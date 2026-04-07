@@ -22,10 +22,10 @@ const Portfolio = () => {
   return (
     <>
       <section className="portfolio container">
-        <div className="experience-inner container">
+        <div className="portfolio-intro">
           <PageHeader title="Projects" description="View my work" />
         </div>
-        <div className="row portfolio-grid">
+        <div className="row portfolio-grid g-3">
           <ProjectList />
         </div>
       </section>
