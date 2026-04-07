@@ -15,9 +15,8 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
   };
 
   const [ref, inView] = useInView({
-    /* Mobile: 50% threshold often never fires — cards stay opacity:0 */
-    threshold: 0.08,
-    rootMargin: "0px 0px 12% 0px",
+    threshold: 0,
+    rootMargin: "0px 0px 15% 0px",
     triggerOnce: true,
   });
 
@@ -35,7 +34,7 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
   return (
     <motion.div
       ref={ref}
-      className="col-sm-12 col-lg-6 col-lg-4 col-xl-4"
+      className="col-12 col-sm-12 col-lg-6 col-xl-4"
       variants={variants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}

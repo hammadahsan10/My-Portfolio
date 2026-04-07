@@ -26,10 +26,12 @@ const variants = {
   },
 };
 
+/* amount: 0.15 breaks tall sections (e.g. #portfolio with many cards): on mobile
+   visible ratio is viewportH/sectionH, often < 15% — section never animates in (stays opacity:0). */
 const viewport = {
   once: true,
-  amount: 0.15,
-  margin: "0px 0px -14% 0px",
+  amount: "some",
+  margin: "0px 0px -8% 0px",
 };
 
 const AnimatedSection = ({
