@@ -6,10 +6,12 @@ const experienceData = [
     location: "Rawalpindi, Pakistan",
     period: "May 2025 – Present",
     bullets: [
-      "Designed, developed, and maintained robust front-end user interface components using Material UI, PrimeReact, and Ant Design.",
-      "Integrated REST APIs using Axios and RTK Query.",
+      "Designed, developed, and maintained robust front-end user interface components using Tailwind CSS, Material UI, PrimeReact, and Ant Design.",
+      "Developed scalable backend and full-stack applications using NestJS and Next.js with databases such as MongoDB, MySQL, Supabase, and PostgreSQL",
+      "Built and integrated AI-powered features including intelligent agents, automation workflows, and API-based AI services.",
+      "Implemented hardware integrations, including IoT and device communication",
+      "Integrated REST and SOAP APIs using Axios and RTK Query.",
       "Worked with Redux, Redux Toolkit, and RTK Query for state management.",
-      "Developed backend and full-stack features using Node.js and Next.js with databases such as MongoDB, MySQL, and PostgreSQL.",
       "Utilized Git, GitHub, GitLab, Heroku, AWS, and Microsoft Azure for version control and deployment.",
     ],
   },
@@ -36,7 +38,7 @@ const experienceData = [
     location: "Remote",
     period: "Dec 2022 – Present",
     bullets: [
-      "As a Freelancer, I completed multiple projects in React and Node with MongoDB. I'm skilled in adapting to client needs, managing timelines, and delivering high-quality, scalable solutions.",
+      "As a freelancer, I have completed multiple projects as a full stack developer. I am skilled in adapting to client needs, managing timelines, and delivering high-quality, scalable solutions.",
     ],
   },
 ];

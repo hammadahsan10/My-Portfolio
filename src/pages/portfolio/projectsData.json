@@ -202,11 +202,21 @@
   {
     "title": "HEC Attestation",
     "image": "./projectImages/hec.png",
-    "description": "Developed an online platform for degree attestation starting from universities POC to HEC administration, utilizing blockchain data (Unable to provide the code and live link due to our policies)",
+    "description": "Developed an online platform for degree attestation starting from universities POC to HEC administration, utilizing blockchain data.",
     "technologies": "React JS | HTML/CSS/SCSS | Bootstrap | PrimeReact | Node JS | MongoDB",
     "deployed": "",
     "bgcolor": "#38bdf8",
     "company": true,
     "id": "21"
+  },
+  {
+    "title": "iSocia",
+    "image": "./projectImages/isocia.png",
+    "description": "Developed a detailed inventory and sales management system. The system processes data from Excel files (including inventory, sales, invoices, and purchases), performs automated calculations, and uses the Bedrock AI API to predict available stock levels and inventory trends",
+    "technologies": "Next JS | Nest JS | Typescript | Material UI | MongoDB | Bedrock AI API",
+    "deployed": "https://isocia-pharmacy-d43b69afecb8.herokuapp.com/",
+    "bgcolor": "#2563eb",
+    "company": true,
+    "id": "22"
   }
 ]

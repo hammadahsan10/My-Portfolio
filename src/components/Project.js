@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Modal from "react-modal";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import closeModal from "../images/close.svg";
 
 const Project = ({ technologies, title, image, color, id, github, deployed, description }) => {
@@ -31,7 +31,6 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
   const handleCloseModal = () => setShowModal(false);
 
   return (
-
     <motion.div
       ref={ref}
       className="col-sm-12 col-lg-6 col-lg-4 col-xl-4"
@@ -47,7 +46,10 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
         className="projectCard d-flex align-items-center justify-content-center p-5"
         onClick={handleOpenModal}
       >
-        <div className="textWrap col-6 d-flex flex-column justify-content-center align-items-center" style={{marginRight:"50px"}}>
+        <div
+          className="textWrap col-6 d-flex flex-column justify-content-center align-items-center"
+          style={{ marginRight: "50px" }}
+        >
           <h3 className="projectTitle">{title}</h3>
           <span className="viewWork">Project Details &#8594;</span>
         </div>
@@ -59,69 +61,63 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
       <Modal
         isOpen={showModal}
         onRequestClose={handleCloseModal}
-        className="modal-responsive"
-        style={{
-          content: {
-            backgroundColor: "#131a22",
-            color: "#9f9f9f",
-            padding: "40px", 
-            display: "flex",
-            flexDirection: "column",
-            margin: "auto",
-            maxWidth: "50%",
-            maxHeight: "60%",
-          },
-          overlay: {
-            zIndex: "9999",
-            overflow: "hidden",
-            backgroundColor: "rgba(19, 26, 34, 0.9)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          },
-        }}
-        
+        className="project-modal-content"
+        overlayClassName="project-modal-overlay"
+        closeTimeoutMS={240}
+        contentLabel={title}
       >
+        <div className="project-modal-inner">
+          <button
+            type="button"
+            className="project-modal-close"
+            onClick={handleCloseModal}
+            aria-label="Close project details"
+          >
+            <img src={closeModal} alt="" width={18} height={18} />
+          </button>
 
-        <div className="container modal">
-          <img src={closeModal} className="closeMenu " onClick={handleCloseModal} alt="Close"></img>
-          <h3 className="modalTitle">{title}</h3>
-          <h5 className="modalTitle">{technologies}</h5>
-          <div className="projectDescription">
+          <div className="project-modal-accent" aria-hidden />
+
+          <header className="project-modal-header">
+            <h2 className="project-modal-title">{title}</h2>
+            <p className="project-modal-tech">{technologies}</p>
+          </header>
+
+          <div className="project-modal-body">
             {description.split("\n").map((paragraph, i) => (
-              <p key={{ i }}>
+              <p key={i} className="project-modal-paragraph">
                 {paragraph}
-                <br />
-                <br />
               </p>
             ))}
           </div>
 
-          <div className="modalBtns">
-            <>
-              {github ?
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 1 }}
-                  className="btn"
-                  onClick={() => (window.location.href = github)}
-                >
-
-                  Get Code
-                </motion.button>
-                : null}
-              {deployed ?
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 1 }}
-                  className="btn"
-                  onClick={() => (window.location.href = deployed)}
-                >
-                  View Site
-                </motion.button>
-                : null}
-            </>
-          </div>
+          <footer className="project-modal-footer">
+            {github ? (
+              <motion.button
+                type="button"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+                className="btn project-modal-btn project-modal-btn--secondary"
+                onClick={() => {
+                  window.location.href = github;
+                }}
+              >
+                Get code
+              </motion.button>
+            ) : null}
+            {deployed ? (
+              <motion.a
+                href={deployed}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+                className="btn project-modal-btn project-modal-btn--primary"
+              >
+                View site
+              </motion.a>
+            ) : null}
+          </footer>
         </div>
       </Modal>
     </motion.div>
