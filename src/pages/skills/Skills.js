@@ -17,15 +17,16 @@ const skillsData = {
     'Redux',
     'Redux Toolkit',
     'API Integration (Fetch / Axios)',
-    'PrimeReact',
+    'ShadCN',
     'Material UI',
-    'Ant Design'
+    'PrimeReact'
   ],
   database: [
     'MongoDB',
     'MySQL',
     'PostgreSQL',
-    'Supabase'
+    'Supabase',
+    'Firebase'
   ],
   backend: [
     'Node.js (Express.js)',
@@ -47,8 +48,7 @@ const skillsData = {
   tools: [
     'Git',
     'GitHub',
-    'GitLab',
-    'Firebase'
+    'GitLab'
   ]
 };
 
@@ -58,87 +58,87 @@ const Skills = () => {
   const wrapperMotion = reduceMotion
     ? { initial: false }
     : {
-        initial: { opacity: 0, y: 36 },
-        whileInView: { opacity: 1, y: 0 },
-        viewport: { once: true, amount: 0.14 },
-        transition: { duration: 0.72, ease },
-      };
+      initial: { opacity: 0, y: 36 },
+      whileInView: { opacity: 1, y: 0 },
+      viewport: { once: true, amount: 0.14 },
+      transition: { duration: 0.72, ease },
+    };
 
   return (
-        <div className="skills-container container">
-          <PageHeader title="Skills" description="Tech stack & tools" />
-          <motion.div className="skills-wrapper" {...wrapperMotion}>
-            {/* Left Section */}
-            <div className="skills-column left-column">
-              {/* Frontend */}
-              <div className="skill-category fade-in">
-                <h4 className="category-title">Frontend</h4>
-                <div className="skills-grid">
-                  {skillsData.frontend.map((skill, index) => (
-                    <div className="skill-badge" key={index}>
-                      {skill}
-                    </div>
-                  ))}
+    <div className="skills-container container">
+      <PageHeader title="Skills" description="Tech stack & tools" />
+      <motion.div className="skills-wrapper" {...wrapperMotion}>
+        {/* Left Section */}
+        <div className="skills-column left-column">
+          {/* Frontend */}
+          <div className="skill-category fade-in">
+            <h4 className="category-title">Frontend</h4>
+            <div className="skills-grid">
+              {skillsData.frontend.map((skill, index) => (
+                <div className="skill-badge" key={index}>
+                  {skill}
                 </div>
-              </div>
-
-              {/* Backend */}
-              <div className="skill-category fade-in">
-                <h4 className="category-title">Backend</h4>
-                <div className="skills-grid">
-                  {skillsData.backend.map((skill, index) => (
-                    <div className="skill-badge" key={index}>
-                      {skill}
-                    </div>
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
+          </div>
 
-            {/* Divider */}
-            <div className="skills-divider"></div>
-
-            {/* Right Section */}
-            <div className="skills-column right-column">
-              {/* Database */}
-              <div className="skill-category fade-in">
-                <h4 className="category-title">Database</h4>
-                <div className="skills-grid">
-                  {skillsData.database.map((skill, index) => (
-                    <div className="skill-badge" key={index}>
-                      {skill}
-                    </div>
-                  ))}
+          {/* Backend */}
+          <div className="skill-category fade-in">
+            <h4 className="category-title">Backend</h4>
+            <div className="skills-grid">
+              {skillsData.backend.map((skill, index) => (
+                <div className="skill-badge" key={index}>
+                  {skill}
                 </div>
-              </div>
-
-              {/* Cloud & Deployment */}
-              <div className="skill-category fade-in">
-                <h4 className="category-title">Cloud & Deployment</h4>
-                <div className="skills-grid">
-                  {skillsData.cloud.map((skill, index) => (
-                    <div className="skill-badge" key={index}>
-                      {skill}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Tools & Version Control */}
-              <div className="skill-category fade-in">
-                <h4 className="category-title">Tools & Version Control</h4>
-                <div className="skills-grid">
-                  {skillsData.tools.map((skill, index) => (
-                    <div className="skill-badge" key={index}>
-                      {skill}
-                    </div>
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
-          </motion.div>
+          </div>
         </div>
-    );
+
+        {/* Divider */}
+        <div className="skills-divider"></div>
+
+        {/* Right Section */}
+        <div className="skills-column right-column">
+          {/* Database */}
+          <div className="skill-category fade-in">
+            <h4 className="category-title">Database</h4>
+            <div className="skills-grid">
+              {skillsData.database.map((skill, index) => (
+                <div className="skill-badge" key={index}>
+                  {skill}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Cloud & Deployment */}
+          <div className="skill-category fade-in">
+            <h4 className="category-title">Cloud & Deployment</h4>
+            <div className="skills-grid">
+              {skillsData.cloud.map((skill, index) => (
+                <div className="skill-badge" key={index}>
+                  {skill}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tools & Version Control */}
+          <div className="skill-category fade-in">
+            <h4 className="category-title">Tools & Version Control</h4>
+            <div className="skills-grid">
+              {skillsData.tools.map((skill, index) => (
+                <div className="skill-badge" key={index}>
+                  {skill}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
 };
 
 export default Skills;

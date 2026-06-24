@@ -1,4 +1,4 @@
-import aboutMeImg from "../images/mypic.jpg";
+import aboutMeImg from "../images/myimage.jpeg";
 import { motion, useReducedMotion } from "framer-motion";
 import SocialIcons from "../components/SocialIcons";
 import { useState, useEffect } from "react";
