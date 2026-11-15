@@ -1,20 +1,17 @@
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+
+const ease = [0.16, 1, 0.3, 1];
 
 const ContactInfo = ({ name, email, location }) => {
-  
-  const [ref, inView] = useInView({
-    threshold: 0,
-    triggerOnce: true,
-  });
+  const reduceMotion = useReducedMotion();
 
   return (
     <motion.div
       className="contactInfo"
-      ref={ref}
-      initial={{ x: "10vw", opacity: 0 }}
-      animate={inView ? { x: 0, opacity: 1 } : { x: "10vw", opacity: 0 }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
+      initial={reduceMotion ? false : { opacity: 0, x: 36 }}
+      whileInView={reduceMotion ? undefined : { opacity: 1, x: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.68, ease, delay: 0.1 }}
     >
       <h4 className="contentTitle">Contact Information</h4>
       <p className="infoDescription">Open for opportunities. Let's connect and build something awesome together! </p>

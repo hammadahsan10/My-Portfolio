@@ -4,9 +4,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
-  margin-top: var(--spacing);
-  padding-bottom: var(--spacing);
+  overflow-x: clip;
+  overflow-y: visible;
+  width: 100%;
 }
 
 .projectCard {
@@ -15,11 +15,74 @@
   margin-bottom: 20px;
   overflow: hidden;
   position: relative;
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.55s cubic-bezier(0.16, 1, 0.3, 1);
   flex-direction: column;
   padding: 0 !important;
   border-radius: 26px 6px 26px 6px;
   cursor: pointer;
+  box-shadow: 0 16px 34px rgba(2, 6, 23, 0.26);
+}
+
+.projectCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px rgba(2, 6, 23, 0.42), 0 0 0 1px rgba(72, 163, 198, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .projectCard {
+    transition: none;
+  }
+  .projectCard:hover {
+    transform: none;
+  }
+}
+
+/* --- Project cards: mobile (stack, full width) — desktop rules unchanged below 750px block --- */
+@media (max-width: 749px) {
+  .portfolio-grid {
+    width: 100%;
+  }
+
+  .projectCard {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    height: auto !important;
+    min-height: 0;
+    padding: 1.15rem !important;
+  }
+
+  .projectCard .textWrap,
+  .projectCard .imageContainer {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 auto !important;
+    margin-right: 0 !important;
+    transform: none !important;
+  }
+
+  .projectCard .textWrap {
+    align-items: center !important;
+    text-align: center;
+    margin-bottom: 0.85rem;
+  }
+
+  .projectCard .imageContainer img {
+    margin-top: 0 !important;
+    height: auto !important;
+    max-height: min(220px, 42vh);
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .projectTitle {
+    font-size: clamp(1rem, 4.2vw, 1.15rem);
+    padding: 6px 0;
+  }
+
+  .viewWork {
+    font-size: 13px;
+  }
 }
 
 .row {
@@ -39,7 +102,10 @@
 .imageContainer img {
   height: 12em;
   margin-top: 25px;
-  transition: all 1.3s ease-in-out;
+  transition: transform 1.1s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.8s ease;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.28);
 }
 
 .tech {
@@ -65,45 +131,235 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0.3;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
 }
 
-.closeModal {
-  margin-left: 250px;
-  margin-top: -20px;
+/* --- PROJECT MODAL (polished) --- */
+
+.project-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 4vw, 32px);
+  background: rgba(4, 8, 18, 0.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  animation: projectModalOverlayIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.closeModal:hover {
-  filter: brightness(100);
+.project-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: min(560px, 100%);
+  max-height: min(82vh, 680px);
+  padding: 0;
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  outline: none;
+  background: linear-gradient(
+    165deg,
+    rgba(15, 23, 42, 0.97) 0%,
+    rgba(8, 13, 24, 0.98) 55%,
+    rgba(6, 10, 20, 0.99) 100%
+  );
+  box-shadow:
+    0 28px 64px rgba(2, 6, 23, 0.55),
+    0 0 0 1px rgba(72, 163, 198, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  animation: projectModalContentIn 0.48s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.modalTitle {
-  text-align: center;
-  margin-bottom: 10px;
-  color: white;
+.project-modal-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-height: min(82vh, 680px);
 }
 
-.projectDescription {
-  margin-bottom: 10px;
+.project-modal-accent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--hl-color), rgba(72, 163, 198, 0.25));
+  border-radius: 18px 0 0 18px;
+  pointer-events: none;
 }
 
-.closeMenu {
-  float: right;
-  transform: rotate(180deg);
+.project-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid rgba(159, 159, 159, 0.2);
+  border-radius: 12px;
+  background: rgba(8, 13, 24, 0.65);
   cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.25s ease;
+}
+
+.project-modal-close:hover {
+  background: rgba(72, 163, 198, 0.15);
+  border-color: rgba(72, 163, 198, 0.45);
+  transform: scale(1.05);
+}
+
+.project-modal-close img {
+  opacity: 0.9;
+  filter: brightness(1.2);
+}
+
+.project-modal-header {
+  text-align: center;
+  padding: 28px 48px 16px 24px;
+  border-bottom: 1px solid rgba(72, 163, 198, 0.12);
+}
+
+.project-modal-title {
+  margin: 0 0 10px;
+  font-size: clamp(1.35rem, 3vw, 1.6rem);
+  font-weight: 700;
+  color: var(--text-color);
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+}
+
+.project-modal-tech {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--hl-color);
+  opacity: 0.95;
+}
+
+.project-modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.project-modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-modal-body::-webkit-scrollbar-thumb {
+  background: rgba(72, 163, 198, 0.35);
+  border-radius: 8px;
+}
+
+.project-modal-paragraph {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(200, 205, 214, 0.92);
+}
+
+.project-modal-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.project-modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 18px 24px 22px;
+  border-top: 1px solid rgba(159, 159, 159, 0.1);
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.15));
+}
+
+.project-modal-btn {
+  margin-top: 0;
+  border-radius: 999px;
+  font-weight: 600;
+  padding: 12px 24px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-modal-btn--primary {
+  background: linear-gradient(135deg, var(--hl-color) 0%, #2a6f8a 100%);
+  box-shadow: 0 8px 24px rgba(72, 163, 198, 0.28);
+}
+
+.project-modal-btn--secondary {
+  background: transparent;
+  color: var(--hl-color);
+  border: 1px solid rgba(72, 163, 198, 0.45);
+  box-shadow: none;
+}
+
+.project-modal-btn--secondary:hover {
+  background: rgba(72, 163, 198, 0.12);
+  color: var(--text-color);
+}
+
+@keyframes projectModalOverlayIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes projectModalContentIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-modal-overlay,
+  .project-modal-content {
+    animation: none;
+  }
 }
 
 /* --- MEDIA QUEIRES --- */
 
 @media (max-width: 700px) {
-  .modal-responsive {
-    max-width: 98% !important;
-    max-height: 98% !important;
+  .project-modal-content {
+    max-height: 90vh;
+    border-radius: 14px;
   }
-  .closeMenu
-  {
-    width: 12px !important;
-    margin-left: 20px !important;
+
+  .project-modal-header {
+    padding: 24px 44px 14px 18px;
+  }
+
+  .project-modal-body {
+    padding: 16px 18px 8px;
+  }
+
+  .project-modal-footer {
+    padding: 14px 18px 18px;
+  }
+
+  .project-modal-close {
+    width: 36px;
+    height: 36px;
+    top: 10px;
+    right: 10px;
   }
 }
 
@@ -114,18 +370,25 @@
     height: 350px;
   }
 
-  .portfolio {
-    padding-left: var(--spacing);
-    padding-right: var(--spacing);
+  .projectCard .textWrap {
+    margin-right: 50px;
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .projectCard .imageContainer {
+    flex: 1 1 0;
+    min-width: 0;
   }
 
   .imageContainer {
-    transform: translateX(30%);
-    transition: all 0.3s ease-in-out;
+    transform: translateX(24%);
+    transition: transform 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.12s;
+    will-change: transform;
   }
 
   .projectCard:hover .imageContainer {
-    transform: translateX(-70%);
+    transform: translateX(-48%);
   }
 
   .projectCard:hover .textWrap {
@@ -137,12 +400,14 @@
   }
 
   .projectCard:hover .imageContainer img {
-    scale: 1.4;
+    transform: scale(1.16);
+    transition: transform 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.12s;
   }
 
   .imageContainer {
-    transform: translateX(30%);
-    transition: all 0.3s ease-in-out;
+    transform: translateX(24%);
+    transition: transform 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.12s;
+    will-change: transform;
   }
 
   .textWrap {
